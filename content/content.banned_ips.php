@@ -67,9 +67,9 @@ class contentExtensionAnti_brute_forceBanned_ips extends AdministrationPage
             null,
             array('role' => 'directory', 'aria-labelledby' => 'symphony-subheading', 'data-interactive' => 'data-interactive')
         );
-        $this->Form->appendChild($table);
+        $this->Primary->appendChild($table);
 
-        $this->Form->appendChild(
+        $this->Primary->appendChild(
             ViewFactory::buildActions($this->_hasData)
         );
     }
