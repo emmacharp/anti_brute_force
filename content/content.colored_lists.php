@@ -95,7 +95,7 @@ class contentExtensionAnti_brute_forceColored_Lists extends AdministrationPage
         );
 
         // append table
-        $this->Form->appendChild($table);
+        $this->Primary->appendChild($table);
 
         // insert form
         $insertLine = $this->buildInsertForm();
@@ -106,7 +106,7 @@ class contentExtensionAnti_brute_forceColored_Lists extends AdministrationPage
         );
 
         // append the insert line
-        $this->Form->appendChild($insertLine);
+        $this->Primary->appendChild($insertLine);
     }
 
     /**
@@ -115,10 +115,8 @@ class contentExtensionAnti_brute_forceColored_Lists extends AdministrationPage
      */
     private function buildInsertForm()
     {
-        $wrap = new XMLElement('fieldset');
+        $wrap = new XMLElement('div');
         $wrap->setAttribute('class', 'insert');
-
-        $label = Widget::Label();
 
         $iInput = Widget::Input(
             'insert[ip]',
@@ -139,11 +137,8 @@ class contentExtensionAnti_brute_forceColored_Lists extends AdministrationPage
             )
         );
 
-        $label->appendChild($iInput);
-        $label->appendChild($iBut);
-
-        $wrap->appendChild($label);
-
+        $wrap->appendChild($iInput);
+        $wrap->appendChild($iBut);
         $wrap->appendChild(Widget::Input('list',$this->_curColor, 'hidden'));
 
         return $wrap;
