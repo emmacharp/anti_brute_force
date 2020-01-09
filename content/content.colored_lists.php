@@ -67,8 +67,6 @@ class contentExtensionAnti_brute_forceColored_Lists extends AdministrationPage
 
         $this->setTitle(sprintf('%1$s: %2$s &ndash; %3$s', extension_anti_brute_force::EXT_NAME, $title, __('Symphony')));
 
-        $this->addStylesheetToHead(URL . '/extensions/anti_brute_force/assets/content.abf.css', 'screen', time() + 10);
-
         $this->appendSubheading(__($title));
 
         $cols = $this->getCurrentCols();
