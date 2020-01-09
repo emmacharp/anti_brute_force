@@ -136,7 +136,7 @@ class ViewFactory
         foreach ($options as $key => $o) {
             $button = new XMLElement(
                 'a',
-                Widget::SVGIcon('list') . '<span><span>' . __($o) . '</span></span>'
+                Widget::SVGIcon('list') . '<span>' . __($o) . '</span>'
             );
             $button->setAttribute('class', 'button');
             $button->setAttribute('href', "?list=$key");
